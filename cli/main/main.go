@@ -3,11 +3,12 @@ package main
 import (
 	"cli/core"
 	"fmt"
+	"runtime"
 )
 
 /*
  */
 func main() {
-	fmt.Println("fn ", core.A())
-	core.B()
+	goos := runtime.GOOS
+	fmt.Println(core.File, goos)
 }
